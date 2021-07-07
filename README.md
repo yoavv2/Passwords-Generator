@@ -1,6 +1,21 @@
 # Passwords-Generator
 
 
+## Deployment
+
+To deploy this project install dependencies
+
+```bash
+  npm install
+```
+run file 
+
+```bash
+  node index (options)
+```
+  
+
+## Options
 | Short | Long    | Description                |
 | :-------- | :------- | :------------------------- |
 | `-l` | `--length` | `length of password (default: 8)` |
