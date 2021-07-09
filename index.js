@@ -7,21 +7,22 @@ const createPassword = require("./utils/createPassword");
 const savePassword = require("./utils/savePassword");
 
 program
-  .version("1.0.1")
+  .version("1.1.0")
   .description(chalk.bold.hsl(298, 70, 36)("Simple Password Generator"));
 
 program.option("-l, --length <number>", "length of password", "8");
-program.option("-s, --save", "save passwords to passwords.txt");
 program.option("-nn, --no-numbers", "remove numbers");
-program.option("-ns, --no-symbols", "remove symbols").parse();
+program.option("-ns, --no-symbols", "remove symbols");
+program.option("-s, --save", "save passwords to passwords.txt");
+program.option("-n, --name <string>", "name of the password").parse();
 
-const { length, save, numbers, symbols } = program.opts();
+const { length, save, numbers, symbols, name } = program.opts();
 // Get generated password
 const generatedPassword = createPassword(length, numbers, symbols);
 
 //Save to file
 if (save) {
-  savePassword(generatedPassword);
+  savePassword(name, generatedPassword);
 }
 
 //Copy to clipboard
