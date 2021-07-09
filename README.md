@@ -22,6 +22,7 @@ run file
 | `-V` | `--version` | `Show the version` |
 | `-l` | `--length` | `length of password (default: 8)` |
 | `-s` | `--save` | `save password to passwords.txt` |
+| `-n` | `--name` | `name of the password (default: anon)` |
 | `-nn` | `--no-numbers` | `remove numbers` |
 | `-ns` | `--no-symbols` | `remove symbols` |
 
